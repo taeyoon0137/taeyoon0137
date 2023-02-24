@@ -13,5 +13,6 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**/node_modules": false
-  }
+  },
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
 }
