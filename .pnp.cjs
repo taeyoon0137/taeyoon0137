@@ -30,10 +30,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/image-to-base64", "npm:2.1.0"],\
             ["@types/node", "npm:18.14.1"],\
+            ["@types/prettier", "npm:2.7.2"],\
             ["gh-pages", "npm:5.0.0"],\
             ["image-to-base64", "npm:2.2.0"],\
+            ["prettier", "npm:2.8.4"],\
             ["ts-node", "virtual:c4bea7204963e02b3680446288349563b430a1e28adf2ceea7a01abc049ce92cc3c1330cebc79457da60b1246abd3996e389843df28872331236e93dd017fb9e#npm:10.9.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
+            ["wonderful-tools", "npm:0.1.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -84,10 +87,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@taeyoon0137/taeyoon0137", "workspace:."],\
             ["@types/image-to-base64", "npm:2.1.0"],\
             ["@types/node", "npm:18.14.1"],\
+            ["@types/prettier", "npm:2.7.2"],\
             ["gh-pages", "npm:5.0.0"],\
             ["image-to-base64", "npm:2.2.0"],\
+            ["prettier", "npm:2.8.4"],\
             ["ts-node", "virtual:c4bea7204963e02b3680446288349563b430a1e28adf2ceea7a01abc049ce92cc3c1330cebc79457da60b1246abd3996e389843df28872331236e93dd017fb9e#npm:10.9.1"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
+            ["wonderful-tools", "npm:0.1.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -142,6 +148,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-18.14.1-39865d8170-58556bbdb0.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:18.14.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/prettier", [\
+        ["npm:2.7.2", {\
+          "packageLocation": "./.yarn/cache/@types-prettier-npm-2.7.2-6b2e2f518f-b47d76a525.zip/node_modules/@types/prettier/",\
+          "packageDependencies": [\
+            ["@types/prettier", "npm:2.7.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -609,6 +624,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["prettier", [\
+        ["npm:2.8.4", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.8.4-ba64a351d1-c173064bf3.zip/node_modules/prettier/",\
+          "packageDependencies": [\
+            ["prettier", "npm:2.8.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["semver", [\
         ["npm:6.3.0", {\
           "packageLocation": "./.yarn/cache/semver-npm-6.3.0-b3eace8bfd-1b26ecf6db.zip/node_modules/semver/",\
@@ -735,6 +759,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["whatwg-url", "npm:5.0.0"],\
             ["tr46", "npm:0.0.3"],\
             ["webidl-conversions", "npm:3.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["wonderful-tools", [\
+        ["npm:0.1.1", {\
+          "packageLocation": "./.yarn/cache/wonderful-tools-npm-0.1.1-9b4e34728b-ae45f57d8a.zip/node_modules/wonderful-tools/",\
+          "packageDependencies": [\
+            ["wonderful-tools", "npm:0.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\

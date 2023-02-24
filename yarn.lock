@@ -44,10 +44,13 @@ __metadata:
   dependencies:
     "@types/image-to-base64": ^2.1.0
     "@types/node": ^18.14.1
+    "@types/prettier": ^2.7.2
     gh-pages: ^5.0.0
     image-to-base64: ^2.2.0
+    prettier: ^2.8.4
     ts-node: ^10.9.1
     typescript: ^4.9.5
+    wonderful-tools: ^0.1.1
   languageName: unknown
   linkType: soft
 
@@ -90,6 +93,13 @@ __metadata:
   version: 18.14.1
   resolution: "@types/node@npm:18.14.1"
   checksum: 58556bbdb0050e44a4934742c1da2530812782c06d266a758e669e44c5aa196166c5fce45fdb03f016876717e3840478b3220129bb77367f979607564047f0a3
+  languageName: node
+  linkType: hard
+
+"@types/prettier@npm:^2.7.2":
+  version: 2.7.2
+  resolution: "@types/prettier@npm:2.7.2"
+  checksum: b47d76a5252265f8d25dd2fe2a5a61dc43ba0e6a96ffdd00c594cb4fd74c1982c2e346497e3472805d97915407a09423804cc2110a0b8e1b22cffcab246479b7
   languageName: node
   linkType: hard
 
@@ -487,6 +497,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:^2.8.4":
+  version: 2.8.4
+  resolution: "prettier@npm:2.8.4"
+  bin:
+    prettier: bin-prettier.js
+  checksum: c173064bf3df57b6d93d19aa98753b9b9dd7657212e33b41ada8e2e9f9884066bb9ca0b4005b89b3ab137efffdf8fbe0b462785aba20364798ff4303aadda57e
+  languageName: node
+  linkType: hard
+
 "semver@npm:^6.0.0":
   version: 6.3.0
   resolution: "semver@npm:6.3.0"
@@ -607,6 +626,13 @@ __metadata:
     tr46: ~0.0.3
     webidl-conversions: ^3.0.0
   checksum: b8daed4ad3356cc4899048a15b2c143a9aed0dfae1f611ebd55073310c7b910f522ad75d727346ad64203d7e6c79ef25eafd465f4d12775ca44b90fa82ed9e2c
+  languageName: node
+  linkType: hard
+
+"wonderful-tools@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "wonderful-tools@npm:0.1.1"
+  checksum: ae45f57d8ab501728eb757b776933ff24e7570d3c7d2a038d36e7a658b099bfb66e67e66019bd16a85e1741edcf083fb92799744f821ab14cadc9f4f53c7fedb
   languageName: node
   linkType: hard
 
