@@ -10,6 +10,16 @@
   },
   "bugs": "https://github.com/Taeyoon0137/Taeyoon0137/issues",
   "scripts": {
+    "echo": "yarn echo:clear && yarn echo:build",
+    "echo:build": "yarn ts-node --project ./tsconfig.json scripts/echoScript.build.ts",
+    "echo:clear": "yarn ts-node --project ./tsconfig.json scripts/echoScript.clear.ts",
+    "readme": "echo \"\u001b[30m➔\u001b[0m \u001b[1;34m[T.]\u001b[0m \u001b[0m@taeyoon0137\u001b[0m\u001b[34m/taeyoon0137\u001b[0m \u001b[30m-\u001b[0m \u001b[1;3mreadme\u001b[0m \u001b[30m--------------\u001b[0m Starting script...\" && yarn readme:preview && yarn readme:build && echo \"\u001b[30m➔\u001b[0m \u001b[1;34m[T.]\u001b[0m \u001b[30m@taeyoon0137/taeyoon0137\u001b[0m \u001b[30m-\u001b[0m \u001b[1;3;30mreadme\u001b[0m \u001b[30m--------------\u001b[0m \u001b[1;32mDone ✅\u001b[0m\"",
+    "readme:build": "echo \"\u001b[30m➔\u001b[0m \u001b[1;34m[T.]\u001b[0m \u001b[0m@taeyoon0137\u001b[0m\u001b[34m/taeyoon0137\u001b[0m \u001b[30m-\u001b[0m \u001b[1;3mreadme\u001b[0m\u001b[1;3;35m:build\u001b[0m \u001b[30m--------\u001b[0m Starting script...\" && yarn ts-node --project ./tsconfig.json scripts/readme.build.ts && echo \"\u001b[30m➔\u001b[0m \u001b[1;34m[T.]\u001b[0m \u001b[30m@taeyoon0137/taeyoon0137\u001b[0m \u001b[30m-\u001b[0m \u001b[1;3;30mreadme:build\u001b[0m \u001b[30m--------\u001b[0m \u001b[1;32mDone ✅\u001b[0m\"",
+    "readme:preview": "echo \"\u001b[30m➔\u001b[0m \u001b[1;34m[T.]\u001b[0m \u001b[0m@taeyoon0137\u001b[0m\u001b[34m/taeyoon0137\u001b[0m \u001b[30m-\u001b[0m \u001b[1;3mreadme\u001b[0m\u001b[1;3;35m:preview\u001b[0m \u001b[30m------\u001b[0m Starting script...\" && yarn ts-node --project ./tsconfig.json scripts/readme.preview.ts && echo \"\u001b[30m➔\u001b[0m \u001b[1;34m[T.]\u001b[0m \u001b[30m@taeyoon0137/taeyoon0137\u001b[0m \u001b[30m-\u001b[0m \u001b[1;3;30mreadme:preview\u001b[0m \u001b[30m------\u001b[0m \u001b[1;32mDone ✅\u001b[0m\""
+  },
+  "echoScripts": {
+    "readme": "yarn readme:preview && yarn readme:build",
+    "readme:build": "yarn ts-node --project ./tsconfig.json scripts/readme.build.ts",
     "readme:preview": "yarn ts-node --project ./tsconfig.json scripts/readme.preview.ts"
   },
   "devDependencies": {
