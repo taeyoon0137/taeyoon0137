@@ -28,7 +28,7 @@
 
 <img src="https://img.shields.io/badge/Yarn-%232C8EBB?&logo=yarn&logoColor=%23FFFFFF" /> <img src="https://img.shields.io/badge/Typescript-%233178C6?&logo=typescript&logoColor=%23FFFFFF" /> <img src="https://img.shields.io/badge/Lerna-%239333EA?&logo=lerna&logoColor=%23FFFFFF" /> <img src="https://img.shields.io/badge/React-%2361DAFB?&logo=react&logoColor=%23343A3F" /> <img src="https://img.shields.io/badge/React_Native-%23282c34?&logo=react&logoColor=%2361DAFB" />
 
-### 📌 Tips
+## 📌 Tips
 
 - 이 [README.md] 상단의 배너는 라이트모드와 다크모드에 따라 색상이 변한답니다!
 
