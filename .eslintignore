@@ -1,0 +1,12 @@
+# Config files
+tsconfig.json
+preset.tsconfig.json
+
+# Node files
+node_modules
+
+# Build Files
+dist
+
+# Resource Files
+project
