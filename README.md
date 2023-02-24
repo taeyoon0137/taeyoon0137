@@ -15,8 +15,8 @@
 
 ## 👋 About Me
 
-- Interaction Engineer & Product Designer [@Whatssub Co., Ltd.](whatssubURL)
-- [Resume – Taeyoon Dot.](resumeURL)
+- Interaction Engineer & Product Designer [@Whatssub Co., Ltd.](https://whatssub.co)
+- [Resume – Taeyoon Dot.](https://taeyoon0137.github.io/resume)
 
 ## 🧑‍💻 Tech Stack
 
@@ -27,6 +27,3 @@
 ### Engineering
 
 <img src="https://img.shields.io/badge/Yarn-%232C8EBB?&logo=yarn&logoColor=%23FFFFFF" /> <img src="https://img.shields.io/badge/Typescript-%233178C6?&logo=typescript&logoColor=%23FFFFFF" /> <img src="https://img.shields.io/badge/Lerna-%239333EA?&logo=lerna&logoColor=%23FFFFFF" /> <img src="https://img.shields.io/badge/React-%2361DAFB?&logo=react&logoColor=%23343A3F" /> <img src="https://img.shields.io/badge/React_Native-%23282c34?&logo=react&logoColor=%2361DAFB" />
-
-[whatssubURL]: https://whatssub.co
-[resumeURL]: https://taeyoon0137.github.io/resume
