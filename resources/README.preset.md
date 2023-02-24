@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Whatssub/whatssub-design-system/tree/develop">
+  <a href="https://whatssub.co">
     <img src="https://img.shields.io/badge/2020. 3. 2. ~-%23FFFFFF?&logo=data:image/svg+xml;base64,{{KEY_WHATSSUB}}&logoColor=%23FFFFFF&label=Whatssub Co.,Ltd.&labelColor=%230068FF" />
   </a>
 </p>
