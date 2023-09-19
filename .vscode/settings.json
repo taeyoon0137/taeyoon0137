@@ -14,5 +14,8 @@
     "**/Thumbs.db": true,
     "**/node_modules": false
   },
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+  "cSpell.words": [
+    "echoscript"
+  ]
 }
