@@ -4,18 +4,18 @@
 
 <h1 align="center">Taeyoon Lee <a href="https://github.com/taeyoon0137"><code>@taeyoon0137</code></a></h1>
 <p align="center" style="opacity: 0.56">
-  👋 반가워요. <a href="https://whatssub.co">왓섭</a>에서 인터렉션 엔지니어와 프로덕트 디자이너를 맡고 있는 이태윤입니다.
+  👋 반가워요. 프론트엔드 엔지니어(RN)과 프로덕트 디자이너를 맡고 있는 이태윤입니다.
 </p>
 
 <p align="center">
   <a href="https://whatssub.co">
-    <img src="https://img.shields.io/badge/2020. 3. 2. ~-%23FFFFFF?&logo=data:image/svg+xml;base64,{{KEY_WHATSSUB}}&logoColor=%23FFFFFF&label=Whatssub Co.,Ltd.&labelColor=%230068FF" />
+    <img src="https://img.shields.io/badge/2020. 3. 2. ~ 2024. 9. 3.-%23FFFFFF?&logo=data:image/svg+xml;base64,{{KEY_WHATSSUB}}&logoColor=%23FFFFFF&label=Whatssub Co.,Ltd.&labelColor=%230068FF" />
   </a>
 </p>
 
 ## 👋 About Me
 
-- Interaction Engineer & Product Designer [@Whatssub Co., Ltd.]
+- FE Engineer(RN) & Product Designer
 - [Resume – Taeyoon Dot.]
 
 ## 🔥 Tech Stack
@@ -47,6 +47,5 @@
 
 - 이 [README.md] 상단의 배너는 라이트모드와 다크모드에 따라 색상이 변한답니다!
 
-[@Whatssub Co., Ltd.]: <https://whatssub.co>
 [Resume – Taeyoon Dot.]: <https://taeyoon0137.github.io/resume>
 [README.md]: #
