@@ -45,6 +45,16 @@
   <img src="https://img.shields.io/badge/Lerna-%239333EA?&logo=lerna&logoColor=%23FFFFFF" />
   <img src="https://img.shields.io/badge/React-%2361DAFB?&logo=react&logoColor=%23343A3F" />
   <img src="https://img.shields.io/badge/React_Native-%23282c34?&logo=react&logoColor=%2361DAFB" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-%2306B6D4?&logo=tailwindcss&logoColor=%23FFFFFF" />
+  <img src="https://img.shields.io/badge/Next.js-%23000000?&logo=nextdotjs&logoColor=%23FFFFFF" />
+</blockquote>
+
+<blockquote>
+  <h3>3. Generative A.I.</h3>
+
+  <img src="https://img.shields.io/badge/Codex-%2310A37F?&logo=openai&logoColor=%23FFFFFF" />
+  <img src="https://img.shields.io/badge/Claude_Code-%23D97757?&logo=anthropic&logoColor=%23FFFFFF" />
+  <img src="https://img.shields.io/badge/Opencode-%23000000?&logo=opencode&logoColor=%23FFFFFF" />
 </blockquote>
 
 ## 📌 Tips
