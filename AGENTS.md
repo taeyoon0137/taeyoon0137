@@ -22,7 +22,8 @@ Important files:
 - `resources/assets/preview/preview.dark.png`: dark-mode hero image source.
 - `resources/assets/preview/preview.preset.svg`: SVG template that embeds the light and dark preview images.
 - `resources/assets/preview/preview.svg`: generated README hero SVG.
-- `resources/assets/whatssub/whatssub.svg`: source logo embedded into the Whatssub badge.
+- `resources/assets/logos/vendit.svg`: source logo embedded into the Vendit badge.
+- `resources/assets/logos/whatssub.svg`: source logo embedded into the Whatssub badge.
 - `scripts/readme.preview.ts`: generates `resources/assets/preview/preview.svg`.
 - `scripts/readme.build.ts`: generates `README.md` from `resources/README.preset.md`.
 - `package.json`: Yarn scripts and package metadata.

@@ -9,10 +9,10 @@
 
 <p align="center">
   <a href="https://vendit.co.kr">
-    <img src="https://img.shields.io/badge/2024. 11. ~ -%23FFFFFF?&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI3LjA4NzcgNzQuNTg0MkwzLjYxNTk3IDZIMzAuNDA2MUw1My44Nzc5IDc0LjU4NDJIMjcuMDg3N1oiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik01MC41NTM5IDYuMDAwMDFINzcuMzQ0TDU1LjY1NzMgNjkuMzcwOEw0Mi4yNjM2IDMwLjIyNTNMNTAuNTUzOSA2LjAwMDAxWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==&logoColor=%23FFFFFF&label=Vendit Inc.&labelColor=%234D24E2" />
+    <img src="https://img.shields.io/badge/2024.%2011.%20~-%23FFFFFF?logo=data:image/svg+xml;base64,{{KEY_VENDIT}}&logoColor=%23FFFFFF&label=Vendit%20Inc.&labelColor=%234D24E2" />
   </a>
   <a href="https://whatssub.co">
-    <img src="https://img.shields.io/badge/2020. 3. 2. ~ 2024. 9. 3.-%23FFFFFF?&logo=data:image/svg+xml;base64,{{KEY_WHATSSUB}}&logoColor=%23FFFFFF&label=Whatssub Co.,Ltd.&labelColor=%2384858E" />
+    <img src="https://img.shields.io/badge/2020.%203.%202.%20~%202024.%209.%203.-%23FFFFFF?logo=data:image/svg+xml;base64,{{KEY_WHATSSUB}}&logoColor=%23FFFFFF&label=Whatssub%20Co.%2CLtd.&labelColor=%2384858E" />
   </a>
 </p>
 

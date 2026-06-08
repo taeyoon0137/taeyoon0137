@@ -13,7 +13,9 @@ const README_FILE = path.resolve(__dirname, '../README.md');
 const RESOURCES_DIR_NAME = path.resolve('resources');
 const RESOURCES_DIR = path.resolve(__dirname, RESOURCES_DIR_NAME);
 const README_PRESET_FILE = path.resolve(RESOURCES_DIR, './README.preset.md');
-const WHATSSUB_FILE = path.resolve(RESOURCES_DIR, './assets/whatssub/whatssub.svg');
+const LOGOS_DIR = path.resolve(RESOURCES_DIR, './assets/logos');
+const VENDIT_FILE = path.resolve(LOGOS_DIR, './vendit.svg');
+const WHATSSUB_FILE = path.resolve(LOGOS_DIR, './whatssub.svg');
 
 /**
  * README Preset 문자열을 기반으로 주입이 필요한 정보를 불러와 이를 주입하고, 저장합니다.
@@ -22,12 +24,14 @@ async function main() {
   /* README.md 프리셋 로드 */
   const readmePreset = getReadMePreset();
 
-  /* 각 패키지별 버전 로드 */
-  const logoSymbol = getLogoSymbol();
+  /* 로고 심볼 로드 */
+  const venditSymbol = getLogoSymbol(VENDIT_FILE);
+  const whatssubSymbol = getLogoSymbol(WHATSSUB_FILE);
 
   /* 코드 주입 */
   const readme = inject(readmePreset, {
-    KEY_WHATSSUB: logoSymbol,
+    KEY_VENDIT: venditSymbol,
+    KEY_WHATSSUB: whatssubSymbol,
   })
     .split(`../${RESOURCES_DIR_NAME}`)
     .join(`./${RESOURCES_DIR_NAME}`);
@@ -46,12 +50,13 @@ function getReadMePreset(): string {
 }
 
 /**
- * 왓섭 심볼을 Base64 포멧으로 로드합니다.
+ * 심볼 SVG를 URL-safe Base64 포멧으로 로드합니다.
  * 
- * @returns 왓섭 심볼 Base64 포멧 문자열
+ * @param file 로드할 심볼 SVG 파일 경로
+ * @returns 심볼 SVG URL-safe Base64 포멧 문자열
  */
-function getLogoSymbol() {
-  return fs.readFileSync(WHATSSUB_FILE, { encoding: 'base64' });
+function getLogoSymbol(file: string) {
+  return encodeURIComponent(fs.readFileSync(file, { encoding: 'base64' }));
 }
 
 /**
