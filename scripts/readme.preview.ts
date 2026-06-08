@@ -4,8 +4,9 @@
 */
 
 import fs from 'fs';
-import imageToBase64 from 'image-to-base64';
 import path from 'path';
+
+import imageToBase64 from 'image-to-base64';
 
 /* 경로 설정 */
 const PREVIEW_DIR = path.resolve(__dirname, '../resources/assets/preview');
