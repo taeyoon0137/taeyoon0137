@@ -9,15 +9,15 @@ import prettier from 'prettier';
 
 /* 파일명 및 경로 설정 */
 const README_FILE = path.resolve(__dirname, '../README.md');
-const RESOURCES_DIR_NAME = path.resolve('resources')
-const RESOURCES_DIR = path.resolve(__dirname, RESOURCES_DIR_NAME)
-const README_PRESET_FILE = path.resolve(RESOURCES_DIR, './README.preset.md')
+const RESOURCES_DIR_NAME = path.resolve('resources');
+const RESOURCES_DIR = path.resolve(__dirname, RESOURCES_DIR_NAME);
+const README_PRESET_FILE = path.resolve(RESOURCES_DIR, './README.preset.md');
 const WHATSSUB_FILE = path.resolve(RESOURCES_DIR, './assets/whatssub/whatssub.svg');
 
 /**
  * README Preset 문자열을 기반으로 주입이 필요한 정보를 불러와 이를 주입하고, 저장합니다.
  */
-function main() {
+async function main() {
   /* README.md 프리셋 로드 */
   const readmePreset = getReadMePreset();
 
@@ -32,7 +32,7 @@ function main() {
     .join(`./${RESOURCES_DIR_NAME}`);
 
   /* README 내 버전 삽입 및 저장 */
-  fs.writeFileSync(README_FILE, prettier.format(readme, { parser: 'markdown' }));
+  fs.writeFileSync(README_FILE, await prettier.format(readme, { parser: 'markdown' }));
 }
 
 /**
