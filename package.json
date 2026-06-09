@@ -12,21 +12,12 @@
   "scripts": {
     "lint": "eslint .",
     "publish": "git switch develop && yarn readme && git add . && git commit -m \"chore: build\" && git push origin develop && git switch main && git pull . develop && git push origin main",
-    "readme": "yarn readme:preview && yarn readme:build",
-    "readme:build": "yarn ts-node --project ./tsconfig.json scripts/readme.build.ts",
-    "readme:preview": "yarn ts-node --project ./tsconfig.json scripts/readme.preview.ts"
+    "readme": "bash ./scripts/readme_update.sh"
   },
   "devDependencies": {
-    "@types/image-to-base64": "^2.1.2",
-    "@types/node": "^25.9.2",
-    "@types/prettier": "^3.0.0",
     "eslint": "^9.39.1",
     "eslint-config-taeyoon": "0.2.1",
-    "gh-pages": "^6.3.0",
-    "image-to-base64": "^2.2.0",
     "prettier": "^3.8.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^6.0.3",
-    "wonderful-tools": "^0.2.1"
+    "typescript": "^6.0.3"
   }
 }
