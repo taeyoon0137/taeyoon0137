@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="taeyoon-dot." src="./resources/assets/preview/preview.svg" style=" width: calc(100% + 16px); margin-left: -8px; margin-right: -8px; overflow: hidden; object-fit: cover; " />
+  <img alt="taeyoon-dot." src="./resources/readme-hero.svg" style=" width: calc(100% + 16px); margin-left: -8px; margin-right: -8px; overflow: hidden; object-fit: cover; " />
 </p>
 
 <h1 align="center">Taeyoon Lee <a href="https://github.com/taeyoon0137"><code>@taeyoon0137</code></a></h1>
