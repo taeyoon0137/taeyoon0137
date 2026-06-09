@@ -1,8 +1,8 @@
-import base from 'eslint-config-taeyoon/base';
+import taeyoon from "eslint-config-taeyoon";
 
 export default [
   {
-    ignores: ['.pnp.*', '.yarn/**', 'dist/**', 'node_modules/**'],
+    ignores: [".pnp.*", ".yarn/**", "dist/**", "node_modules/**"],
   },
-  ...base,
+  ...taeyoon,
 ];

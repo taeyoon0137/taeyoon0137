@@ -61,7 +61,7 @@
 
 - 이 [README.md] 상단의 배너는 라이트모드와 다크모드에 따라 색상이 변한답니다!
 
-[@Vendit Inc.]: <https://www.vendit.co.kr/>
-[@Whatssub Co., Ltd.]: <https://whatssub.co>
-[Resume – Taeyoon Dot.]: <https://resume.taeyoon.xyz/>
+[@Vendit Inc.]: https://www.vendit.co.kr/
+[@Whatssub Co., Ltd.]: https://whatssub.co
+[Resume – Taeyoon Dot.]: https://resume.taeyoon.xyz/
 [README.md]: #

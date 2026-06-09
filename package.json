@@ -14,6 +14,7 @@
     "publish": "git switch develop && yarn readme && git add . && git commit -m \"chore: build\" && git push origin develop && git switch main && git pull . develop && git push origin main",
     "readme": "bash ./scripts/readme_update.sh"
   },
+  "prettier": "eslint-config-taeyoon/prettier",
   "devDependencies": {
     "eslint": "^9.39.1",
     "eslint-config-taeyoon": "0.2.1",
