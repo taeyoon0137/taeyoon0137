@@ -8,16 +8,21 @@
 </p>
 
 <p align="center">
+  <a href="https://brandazine.com/">
+    <img src="https://img.shields.io/badge/2026.%208.%20~-%23FFFFFF?logo=data:image/svg+xml;base64,{{KEY_INEDIT}}&logoColor=%23FFFFFF&label=In%C3%A9dit%20Corp.&labelColor=%23000000" />
+  </a>
+  <br />
   <a href="https://vendit.co.kr">
-    <img src="https://img.shields.io/badge/2024.%2011.%20~-%23FFFFFF?logo=data:image/svg+xml;base64,{{KEY_VENDIT}}&logoColor=%23FFFFFF&label=Vendit%20Inc.&labelColor=%234D24E2" />
+    <img src="https://img.shields.io/badge/2024.%2011.%20~%202026.%207.-%23FFFFFF?logo=data:image/svg+xml;base64,{{KEY_VENDIT}}&logoColor=%23FFFFFF&label=Vendit%20Inc.&labelColor=%2384858E" />
   </a>
   <a href="https://whatssub.co">
-    <img src="https://img.shields.io/badge/2020.%203.%202.%20~%202024.%209.%203.-%23FFFFFF?logo=data:image/svg+xml;base64,{{KEY_WHATSSUB}}&logoColor=%23FFFFFF&label=Whatssub%20Co.%2CLtd.&labelColor=%2384858E" />
+    <img src="https://img.shields.io/badge/2020.%203.%20~%202024.%209.-%23FFFFFF?logo=data:image/svg+xml;base64,{{KEY_WHATSSUB}}&logoColor=%23FFFFFF&label=Whatssub%20Co.%2CLtd.&labelColor=%2384858E" />
   </a>
 </p>
 
 ## 👋 About Me
 
+- Product Designer [@Inédit Corp.]
 - Product Designer [@Vendit Inc.]
 - Lead Product Designer & FE Engineer(RN) [@Whatssub Co., Ltd.]
 - [Resume – Taeyoon Dot.]
@@ -61,6 +66,7 @@
 
 - 이 [README.md] 상단의 배너는 라이트모드와 다크모드에 따라 색상이 변한답니다!
 
+[@Inédit Corp.]: https://brandazine.com/
 [@Vendit Inc.]: https://www.vendit.co.kr/
 [@Whatssub Co., Ltd.]: https://whatssub.co
 [Resume – Taeyoon Dot.]: https://resume.taeyoon.xyz/

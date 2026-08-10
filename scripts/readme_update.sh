@@ -10,6 +10,7 @@ README_FILE="$ROOT_DIR/README.md"
 PRESET_README_FILE="$ROOT_DIR/resources/README.preset.md"
 PRESET_HERO_FILE="$ROOT_DIR/resources/readme-hero.preset.svg"
 HERO_FILE="$ROOT_DIR/resources/readme-hero.svg"
+INEDIT_LOGO_FILE="$ROOT_DIR/resources/assets/logos/inedit.svg"
 VENDIT_LOGO_FILE="$ROOT_DIR/resources/assets/logos/vendit.svg"
 WHATSSUB_LOGO_FILE="$ROOT_DIR/resources/assets/logos/whatssub.svg"
 
@@ -132,6 +133,7 @@ encode_logo_symbol() {
   ' "$file"
 }
 
+INEDIT_SYMBOL="$(encode_logo_symbol "$INEDIT_LOGO_FILE")"
 VENDIT_SYMBOL="$(encode_logo_symbol "$VENDIT_LOGO_FILE")"
 WHATSSUB_SYMBOL="$(encode_logo_symbol "$WHATSSUB_LOGO_FILE")"
 
@@ -181,21 +183,22 @@ perl -MMIME::Base64=encode_base64 -0pe '
 
 perl -0pe '
   BEGIN {
-    ($project_name, $display_name, $repository_url, $badge_block, $vendit_symbol, $whatssub_symbol) = @ARGV;
-    @ARGV = @ARGV[6..$#ARGV];
+    ($project_name, $display_name, $repository_url, $badge_block, $inedit_symbol, $vendit_symbol, $whatssub_symbol) = @ARGV;
+    @ARGV = @ARGV[7..$#ARGV];
   }
 
   s/\$\{projectName\}/$project_name/g;
   s/\$\{displayName\}/$display_name/g;
   s/\$\{repositoryUrl\}/$repository_url/g;
   s/\$\{badgeBlock\}/$badge_block/g;
+  s/\{\{KEY_INEDIT\}\}/$inedit_symbol/g;
   s/\{\{KEY_VENDIT\}\}/$vendit_symbol/g;
   s/\{\{KEY_WHATSSUB\}\}/$whatssub_symbol/g;
   s|\.\./resources|./resources|g;
   s|\.\./docs|./docs|g;
   s|\.\./AGENTS\.md|./AGENTS.md|g;
   s|\.\./CLAUDE\.md|./CLAUDE.md|g;
-' "$PROJECT_NAME" "$DISPLAY_NAME" "$REPOSITORY_URL" "$BADGE_BLOCK" "$VENDIT_SYMBOL" "$WHATSSUB_SYMBOL" "$PRESET_README_FILE" > "$README_FILE"
+' "$PROJECT_NAME" "$DISPLAY_NAME" "$REPOSITORY_URL" "$BADGE_BLOCK" "$INEDIT_SYMBOL" "$VENDIT_SYMBOL" "$WHATSSUB_SYMBOL" "$PRESET_README_FILE" > "$README_FILE"
 
 if command -v prettier >/dev/null 2>&1; then
   prettier --write --log-level warn "$README_FILE" >/dev/null

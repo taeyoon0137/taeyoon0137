@@ -50,6 +50,7 @@
 - `resources/hero.light.png`: 라이트 모드 히어로 이미지 원본입니다.
 - `resources/hero.dark.png`: 다크 모드 히어로 이미지 원본입니다.
 - `resources/readme-hero.svg`: 히어로 SVG 생성 결과물입니다.
+- `resources/assets/logos/inedit.svg`: Inédit 뱃지에 임베드되는 로고 원본입니다.
 - `resources/assets/logos/vendit.svg`: Vendit 뱃지에 임베드되는 로고 원본입니다.
 - `resources/assets/logos/whatssub.svg`: Whatssub 뱃지에 임베드되는 로고 원본입니다.
 - `scripts/readme_update.sh`: README와 히어로 SVG를 재생성하는 스크립트입니다.
@@ -77,8 +78,8 @@ README에는 확인된 사실만 씁니다. 추측, 임시 운영 정보, secret
 
 ## 🏷️ 뱃지 로고 적용 기준
 
-- Vendit과 Whatssub 뱃지에 들어가는 로고는 `resources/assets/logos/vendit.svg`와 `resources/assets/logos/whatssub.svg`를 사용합니다.
-- 로고 SVG가 바뀌면 `scripts/readme_update.sh`가 base64로 인코딩해 `{{KEY_VENDIT}}`, `{{KEY_WHATSSUB}}` placeholder에 주입합니다.
+- Inédit, Vendit, Whatssub 뱃지에 들어가는 로고는 `resources/assets/logos/inedit.svg`, `resources/assets/logos/vendit.svg`, `resources/assets/logos/whatssub.svg`를 사용합니다.
+- 로고 SVG가 바뀌면 `scripts/readme_update.sh`가 base64로 인코딩해 `{{KEY_INEDIT}}`, `{{KEY_VENDIT}}`, `{{KEY_WHATSSUB}}` placeholder에 주입합니다.
 - 새 뱃지를 추가할 때는 `resources/assets/logos/`에 로고 SVG를 추가하고, `resources/README.preset.md`의 placeholder와 `scripts/readme_update.sh`의 인젝션 로직을 함께 갱신합니다.
 
 ## 🛠️ 명령
