@@ -63,7 +63,7 @@
 1. README 내용을 바꿀 때는 `resources/README.preset.md`를 수정합니다.
 2. `resources/README.preset.md`의 placeholder, 경로, 섹션 구조가 바뀌면 `scripts/readme_update.sh`의 치환/생성 로직도 함께 수정합니다.
 3. 히어로 wrapper인 `resources/readme-hero.preset.svg` 또는 `resources/hero.*` 이미지가 바뀌면 `scripts/readme_update.sh`의 히어로 SVG 생성 로직도 함께 확인합니다.
-4. `./scripts/readme_update.sh` 또는 `yarn run readme`를 실행해 `README.md`와 `resources/readme-hero.svg`를 재생성합니다.
+4. `./scripts/readme_update.sh` 또는 `corepack yarn run readme`를 실행해 `README.md`와 `resources/readme-hero.svg`를 재생성합니다.
 
 README에는 확인된 사실만 씁니다. 추측, 임시 운영 정보, secret, token, 개인 인증 정보는 포함하지 않습니다.
 
@@ -86,12 +86,26 @@ README에는 확인된 사실만 씁니다. 추측, 임시 운영 정보, secret
 
 이 저장소는 Yarn Berry를 사용합니다.
 
-- 의존성 설치: `yarn install`
-- README와 히어로 SVG 재생성: `yarn run readme` 또는 `./scripts/readme_update.sh`
-- 린트: `yarn run lint`
-- 게시 워크플로: `yarn run publish`
+- 의존성 설치: `corepack yarn install`
+- Changeset 작성: `corepack yarn changeset`
+- README와 히어로 SVG 재생성: `corepack yarn run readme` 또는 `./scripts/readme_update.sh`
+- 린트: `corepack yarn run lint`
+- 전체 취약점 확인: `corepack yarn npm audit --all --recursive`
 
-`publish` 스크립트는 `develop`에서 README를 빌드해 커밋하고 `develop`을 push한 뒤, `main`으로 전환해 `develop`을 합쳐 push합니다. 사용자가 명시적으로 게시를 요청하지 않은 경우에는 실행하지 않습니다.
+## 🚀 GitHub Release 게시
+
+- 릴리스가 필요한 변경에는 `.changeset/*.md` Changeset을 함께 커밋합니다.
+- `main`에 직접 push되면 `.github/workflows/release.yml`이 Changeset release plan을 확인합니다. 유효한 Changeset이 없으면 릴리스 작업을 수행하지 않습니다.
+- 유효한 Changeset이 있으면 GitHub Actions가 버전과 `CHANGELOG.md`를 갱신하고 README를 재생성한 뒤, 버전 커밋을 `main`에 직접 추가합니다. Release PR이나 별도 릴리스 브랜치는 만들지 않습니다.
+- 버전 커밋에 `v<version>` 태그를 추가하고 GitHub Release를 발행합니다. npm에는 게시하지 않습니다.
+- 로컬 `publish` 스크립트나 `develop` → `main` 병합 게시 흐름을 사용하지 않습니다. 사용자가 명시적으로 요청하지 않으면 수동 태그·Release 생성이나 push를 수행하지 않습니다.
+
+## 🔐 의존성 보안 유지보수
+
+- 전체 개발 의존성의 취약점은 `corepack yarn npm audit --all --recursive`로 확인합니다.
+- 2026-08-25 기준 `eslint-config-taeyoon@0.2.2`와 일부 하위 플러그인은 ESLint 10을 peer 범위로 선언하지 않으므로, 이 저장소는 peer 요구사항을 충족하는 최신 ESLint 9.x를 사용합니다.
+- ESLint 9 지원 종료 알림은 보안 취약점과 구분하며 숨기지 않습니다. `eslint-config-taeyoon`과 관련 플러그인이 ESLint 10 지원 버전을 공개하면 ESLint와 함께 갱신하고 `corepack yarn install --immutable`, `corepack yarn run lint`, `corepack yarn npm audit --all --recursive`를 다시 확인한 뒤 이 기록을 제거합니다.
+- TypeScript는 `@typescript-eslint`가 지원하는 최신 범위 때문에 6.x를 유지합니다. TypeScript 7 지원 버전이 공개되면 함께 갱신하고 린트를 다시 확인합니다.
 
 ## 🧱 개발 기준
 
@@ -104,9 +118,9 @@ README에는 확인된 사실만 씁니다. 추측, 임시 운영 정보, secret
 변경 후 가능한 범위에서 아래를 실행합니다.
 
 - 에이전트 지침 변경: `test -f AGENTS.md`, `test -L CLAUDE.md`, `test "$(readlink CLAUDE.md)" = "AGENTS.md"`, `git diff --check`
-- `resources/README.preset.md` 변경: `yarn run readme` 후 `git diff --check`
-- 히어로 wrapper 또는 `resources/hero.*` 이미지 변경: `yarn run readme` 후 `git diff --check`
-- 로고 SVG 변경: `yarn run readme` 후 `git diff --check`
+- `resources/README.preset.md` 변경: `corepack yarn run readme` 후 `git diff --check`
+- 히어로 wrapper 또는 `resources/hero.*` 이미지 변경: `corepack yarn run readme` 후 `git diff --check`
+- 로고 SVG 변경: `corepack yarn run readme` 후 `git diff --check`
 - 스크립트나 TypeScript 설정 변경: 영향을 받는 생성 명령 실행 후 `git diff --check`
 - 작업 종료 전 `git status --short`로 변경 범위를 한 번 더 확인합니다.
 
