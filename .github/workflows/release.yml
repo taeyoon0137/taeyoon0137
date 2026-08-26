@@ -27,29 +27,52 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Set up Node.js
-        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - name: Set up mise toolchain
+        uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
         with:
-          node-version: 24
+          version: "2026.8.14"
+          cache: true
+          github_token: ${{ github.token }}
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Verify toolchain
+        run: |
+          test "$(node --version)" = "v24.19.0"
+          YARN_BIN="$(mise which yarn)" node <<'NODE'
+          const { createHash } = require("node:crypto");
+          const { readFileSync } = require("node:fs");
+          const { packageManager } = require("./package.json");
+
+          const expected = /^yarn@4\.18\.0\+sha512\.([a-f0-9]{128})$/.exec(
+            packageManager,
+          );
+          if (!expected) {
+            throw new Error("Yarn version metadata is out of sync");
+          }
+
+          const actual = createHash("sha512")
+            .update(readFileSync(process.env.YARN_BIN))
+            .digest("hex");
+          if (actual !== expected[1]) {
+            throw new Error("Yarn artifact checksum does not match packageManager");
+          }
+          NODE
+          test "$(yarn --version)" = "4.18.0"
 
       - name: Install dependencies
-        run: corepack yarn install --immutable
+        run: yarn install --immutable
 
       - name: Lint
-        run: corepack yarn run lint
+        run: yarn run lint
 
       - name: Audit high-severity vulnerabilities
-        run: corepack yarn npm audit --all --recursive --severity high
+        run: yarn npm audit --all --recursive --severity high
 
       - name: Check release plan
         id: release-plan
         run: |
           STATUS_FILE="$RUNNER_TEMP/changeset-status.json"
 
-          if ! corepack yarn changeset status --output "$STATUS_FILE"; then
+          if ! yarn changeset status --output "$STATUS_FILE"; then
             if find .changeset -maxdepth 1 -name '*.md' -print -quit | grep -q .; then
               exit 1
             fi
@@ -75,9 +98,9 @@ jobs:
       - name: Apply release versions
         if: steps.release-plan.outputs.has_releases == 'true'
         run: |
-          corepack yarn changeset version
-          corepack yarn install
-          corepack yarn run readme
+          yarn changeset version
+          yarn install
+          yarn run readme
 
       - name: Commit, tag, and push release
         if: steps.release-plan.outputs.has_releases == 'true'
@@ -92,7 +115,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- package.json yarn.lock .pnp.cjs .pnp.loader.mjs CHANGELOG.md .changeset README.md resources/readme-hero.svg
           git commit -m "Chore: Release v${VERSION}"
-          corepack yarn changeset git-tag
+          yarn changeset git-tag
 
           if ! git show-ref --verify --quiet "refs/tags/${TAG}"; then
             echo "Changesets did not create refs/tags/${TAG}" >&2

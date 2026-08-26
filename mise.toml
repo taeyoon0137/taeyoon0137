@@ -1,0 +1,9 @@
+[tools]
+node = "24.19.0"
+"aqua:yarnpkg/berry" = "4.18.0"
+
+[settings]
+lockfile = true
+
+[tool_config]
+locked = true
