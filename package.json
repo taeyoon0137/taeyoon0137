@@ -17,10 +17,10 @@
   },
   "prettier": "eslint-config-taeyoon/prettier",
   "devDependencies": {
-    "@changesets/cli": "^3.0.1",
+    "@changesets/cli": "^3.0.3",
     "eslint": "^9.39.5",
     "eslint-config-taeyoon": "0.2.2",
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.10",
     "typescript": "^6.0.3"
   }
 }
